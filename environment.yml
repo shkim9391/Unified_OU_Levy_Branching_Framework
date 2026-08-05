@@ -1,0 +1,70 @@
+name: unified-oulb
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # Core runtime
+  - python=3.11
+  - pip>=24.0
+
+  # Numerical and tabular computing
+  - numpy>=1.26,<3
+  - pandas>=2.2,<3
+  - scipy>=1.12,<2
+  - statsmodels>=0.14,<1
+  - scikit-learn>=1.4,<2
+
+  # Single-cell and AnnData workflows
+  - anndata>=0.10,<1
+  - scanpy>=1.10,<2
+  - h5py>=3.10,<4
+  - pytables>=3.9,<4
+  - zarr>=2.17,<4
+  - numba>=0.59,<1
+  - umap-learn>=0.5,<1
+
+  # Probabilistic modeling and inference
+  - pymc>=5.24,<6
+  - arviz>=0.18,<1
+  - pytensor>=2.20,<3
+
+  # Plotting and figure export
+  - matplotlib>=3.8,<4
+  - pillow>=10,<13
+  - cairosvg>=2.7,<3
+  - ghostscript
+  - graphviz
+  - python-graphviz
+
+  # Configuration and serialization
+  - pyyaml>=6,<7
+  - tomli>=2,<3
+  - tomli-w>=1,<2
+  - jsonschema>=4.21,<5
+
+  # Testing, validation, and code quality
+  - pytest>=8,<9
+  - pytest-cov>=5,<7
+  - hypothesis>=6,<7
+  - ruff>=0.5,<1
+
+  # Utilities
+  - tqdm>=4.66,<5
+  - joblib>=1.3,<2
+  - psutil>=5.9,<8
+  - click>=8.1,<9
+  - rich>=13,<15
+  - openpyxl>=3.1,<4
+
+  # Documentation
+  - sphinx>=7,<9
+  - myst-parser>=3,<5
+
+  - pip:
+      # Optional statistical and scientific utilities not always
+      # available at compatible versions through Conda.
+      - pingouin>=0.5.4,<1
+      - scikit-posthocs>=0.9,<1
