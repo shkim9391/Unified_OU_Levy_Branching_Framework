@@ -1,4 +1,4 @@
-* Unified Ornstein–Uhlenbeck–Lévy–Branching Framework
+Unified Ornstein–Uhlenbeck–Lévy–Branching Framework
 
 Overview
 
