@@ -1,0 +1,15 @@
+Stage 3 regression validation
+========================================================================
+[PASS] Jump-candidate table: 21 rows; max numeric absolute difference=0
+[PASS] Branch transition table: 21 rows; max numeric absolute difference=0
+[PASS] Branch ecology summary: 14 rows; max numeric absolute difference=0
+[PASS] Branch scaffold-program summary: 4 rows; max numeric absolute difference=0
+[PASS] Branch escape-risk summary: 4 rows; max numeric absolute difference=0
+[PASS] Figure 5 statistics summary: 18 rows; max numeric absolute difference=0
+[PASS] Threshold branch-count table: 9 rows; max numeric absolute difference=0
+[PASS] Threshold transition table: 27 rows; max numeric absolute difference=0
+[PASS] Threshold patient branch table: 84 rows; max numeric absolute difference=0
+[PASS] Threshold switch-rate table: 3 rows; max numeric absolute difference=0
+[PASS] Threshold sensitivity text summary: 152 lines agree
+
+All requested Stage 3 regression checks passed.

@@ -1,0 +1,19 @@
+section	item	value
+transition_count	GMP-like basin -> HSC-like basin	2.0
+transition_count	GMP-like basin -> Progenitor-like basin	1.0
+transition_count	HSC-like basin -> HSC-like basin	2.0
+transition_count	HSC-like basin -> Mono/DC-like basin	1.0
+transition_count	HSC-like basin -> Progenitor-like basin	3.0
+transition_count	Mono/DC-like basin -> HSC-like basin	2.0
+transition_count	Mono/DC-like basin -> Mono/DC-like basin	3.0
+transition_count	Mono/DC-like basin -> Progenitor-like basin	2.0
+transition_count	Progenitor-like basin -> HSC-like basin	1.0
+transition_count	Progenitor-like basin -> Progenitor-like basin	4.0
+dominant_ecotype_by_branch	GMP-like basin	E1_LateErythrocyte_CD8Memory (0.333)
+dominant_ecotype_by_branch	HSC-like basin	E1_LateErythrocyte_CD8Memory (0.429)
+dominant_ecotype_by_branch	Mono/DC-like basin	E1_LateErythrocyte_CD8Memory (0.455)
+dominant_ecotype_by_branch	Progenitor-like basin	E1_LateErythrocyte_CD8Memory (0.333)
+branch_escape_risk	HSC-like basin	mean_jump=0.168; switch_frac=0.667
+branch_escape_risk	Progenitor-like basin	mean_jump=-0.462; switch_frac=0.200
+branch_escape_risk	GMP-like basin	mean_jump=1.581; switch_frac=1.000
+branch_escape_risk	Mono/DC-like basin	mean_jump=0.583; switch_frac=0.571

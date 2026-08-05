@@ -1,0 +1,152 @@
+GSE235063 transition summary and threshold sensitivity
+======================================================================
+
+Threshold >= 20 malignant cells
+----------------------------------------
+Branch counts by timepoint:
+ threshold timepoint  n_total_samples  n_eligible  B1  B2  B3  NA
+        20        DX               27          25   2  15   8   2
+        20       REL               24          24   0   9  15   0
+        20       REM               24           2   0   1   1  22
+
+DX -> REL switch summary:
+ threshold  n_dx_rel_pairs  n_switch  n_stable  switch_rate
+        20              22        11        11          0.5
+
+DX -> REL transition matrix:
+rel_branch  B1  B2  B3
+dx_branch             
+B1           0   2   0
+B2           0   5   8
+B3           0   1   6
+
+Patient-level branch table:
+sample Patient_ID Treatment_Outcome Subgroup DX_branch_ge20 REM_branch_ge20 REL_branch_ge20  dx_rel_pair_available dx_to_rel_switch
+  AML1     PAULSL          Censored    KMT2A           <NA>              B3             NaN                  False             <NA>
+ AML10     PAWTSD          Relapsed    KMT2A             B2            <NA>              B2                   True            False
+ AML11     PAWWCW          Relapsed    KMT2A             B3            <NA>              B3                   True            False
+ AML12     PAWMKP          Relapsed     RUNX             B2            <NA>              B3                   True             True
+ AML13     PAWNPG          Relapsed     RUNX             B2            <NA>              B3                   True             True
+ AML14     PAULDS          Censored     RUNX             B3            <NA>             NaN                  False             <NA>
+ AML15     PAWWXU          Relapsed     RUNX             B3            <NA>              B3                   True            False
+ AML16     PAUZRT          Relapsed     RUNX             B3            <NA>              B3                   True            False
+ AML17     PAXGDG          Relapsed     CBFB             B2             NaN              B2                   True            False
+ AML18     PAVGJG          Relapsed     CBFB             B2             NaN              B3                   True             True
+ AML19     PAUXCD          Relapsed     CBFB             B2             NaN              B2                   True            False
+  AML2     PAVDYE          Relapsed    KMT2A             B2            <NA>              B3                   True             True
+ AML20     PAUURD          Censored     CBFB             B2            <NA>             NaN                  False             <NA>
+ AML21     PAWHFW          Relapsed      FLT             B2              B2              B2                   True            False
+ AML22     PAVBFN          Relapsed      FLT             B3            <NA>              B3                   True            False
+ AML23     PAXLWH          Relapsed      FLT             B3            <NA>              B2                   True             True
+ AML24     PAXLEE          Relapsed      FLT             B2            <NA>              B3                   True             True
+ AML25     PAUUWT          Relapsed    Other             B2            <NA>              B3                   True             True
+ AML26     PAUVAT          Relapsed    Other             B3            <NA>              B3                   True            False
+ AML27     PAVBCV          Relapsed    Other             B2            <NA>              B2                   True            False
+ AML28     PAVUBN          Relapsed    Other            NaN            <NA>              B3                  False             <NA>
+  AML3     PAUWUZ          Censored    KMT2A             B2            <NA>             NaN                  False             <NA>
+  AML4     PAWHKK          Relapsed    KMT2A             B2             NaN              B3                   True             True
+  AML5     PAWUAE          Relapsed    KMT2A             B1            <NA>              B2                   True             True
+  AML6     PAWNYX          Relapsed    KMT2A             B2            <NA>              B3                   True             True
+  AML7     PAWNPU          Relapsed    KMT2A           <NA>            <NA>              B2                  False             <NA>
+  AML8     PAVJXG          Relapsed    KMT2A             B3            <NA>              B3                   True            False
+  AML9     PAWRVC          Relapsed    KMT2A             B1            <NA>              B2                   True             True
+
+Threshold >= 50 malignant cells
+----------------------------------------
+Branch counts by timepoint:
+ threshold timepoint  n_total_samples  n_eligible  B1  B2  B3  NA
+        50        DX               27          25   2  15   8   2
+        50       REL               24          23   0   9  14   1
+        50       REM               24           2   0   1   1  22
+
+DX -> REL switch summary:
+ threshold  n_dx_rel_pairs  n_switch  n_stable  switch_rate
+        50              21        11        10      0.52381
+
+DX -> REL transition matrix:
+rel_branch  B1  B2  B3
+dx_branch             
+B1           0   2   0
+B2           0   5   8
+B3           0   1   5
+
+Patient-level branch table:
+sample Patient_ID Treatment_Outcome Subgroup DX_branch_ge50 REM_branch_ge50 REL_branch_ge50  dx_rel_pair_available dx_to_rel_switch
+  AML1     PAULSL          Censored    KMT2A           <NA>              B3             NaN                  False             <NA>
+ AML10     PAWTSD          Relapsed    KMT2A             B2            <NA>              B2                   True            False
+ AML11     PAWWCW          Relapsed    KMT2A             B3            <NA>            <NA>                  False             <NA>
+ AML12     PAWMKP          Relapsed     RUNX             B2            <NA>              B3                   True             True
+ AML13     PAWNPG          Relapsed     RUNX             B2            <NA>              B3                   True             True
+ AML14     PAULDS          Censored     RUNX             B3            <NA>             NaN                  False             <NA>
+ AML15     PAWWXU          Relapsed     RUNX             B3            <NA>              B3                   True            False
+ AML16     PAUZRT          Relapsed     RUNX             B3            <NA>              B3                   True            False
+ AML17     PAXGDG          Relapsed     CBFB             B2             NaN              B2                   True            False
+ AML18     PAVGJG          Relapsed     CBFB             B2             NaN              B3                   True             True
+ AML19     PAUXCD          Relapsed     CBFB             B2             NaN              B2                   True            False
+  AML2     PAVDYE          Relapsed    KMT2A             B2            <NA>              B3                   True             True
+ AML20     PAUURD          Censored     CBFB             B2            <NA>             NaN                  False             <NA>
+ AML21     PAWHFW          Relapsed      FLT             B2              B2              B2                   True            False
+ AML22     PAVBFN          Relapsed      FLT             B3            <NA>              B3                   True            False
+ AML23     PAXLWH          Relapsed      FLT             B3            <NA>              B2                   True             True
+ AML24     PAXLEE          Relapsed      FLT             B2            <NA>              B3                   True             True
+ AML25     PAUUWT          Relapsed    Other             B2            <NA>              B3                   True             True
+ AML26     PAUVAT          Relapsed    Other             B3            <NA>              B3                   True            False
+ AML27     PAVBCV          Relapsed    Other             B2            <NA>              B2                   True            False
+ AML28     PAVUBN          Relapsed    Other            NaN            <NA>              B3                  False             <NA>
+  AML3     PAUWUZ          Censored    KMT2A             B2            <NA>             NaN                  False             <NA>
+  AML4     PAWHKK          Relapsed    KMT2A             B2             NaN              B3                   True             True
+  AML5     PAWUAE          Relapsed    KMT2A             B1            <NA>              B2                   True             True
+  AML6     PAWNYX          Relapsed    KMT2A             B2            <NA>              B3                   True             True
+  AML7     PAWNPU          Relapsed    KMT2A           <NA>            <NA>              B2                  False             <NA>
+  AML8     PAVJXG          Relapsed    KMT2A             B3            <NA>              B3                   True            False
+  AML9     PAWRVC          Relapsed    KMT2A             B1            <NA>              B2                   True             True
+
+Threshold >= 100 malignant cells
+----------------------------------------
+Branch counts by timepoint:
+ threshold timepoint  n_total_samples  n_eligible  B1  B2  B3  NA
+       100        DX               27          25   2  15   8   2
+       100       REL               24          23   0   9  14   1
+       100       REM               24           2   0   1   1  22
+
+DX -> REL switch summary:
+ threshold  n_dx_rel_pairs  n_switch  n_stable  switch_rate
+       100              21        11        10      0.52381
+
+DX -> REL transition matrix:
+rel_branch  B1  B2  B3
+dx_branch             
+B1           0   2   0
+B2           0   5   8
+B3           0   1   5
+
+Patient-level branch table:
+sample Patient_ID Treatment_Outcome Subgroup DX_branch_ge100 REM_branch_ge100 REL_branch_ge100  dx_rel_pair_available dx_to_rel_switch
+  AML1     PAULSL          Censored    KMT2A            <NA>               B3              NaN                  False             <NA>
+ AML10     PAWTSD          Relapsed    KMT2A              B2             <NA>               B2                   True            False
+ AML11     PAWWCW          Relapsed    KMT2A              B3             <NA>             <NA>                  False             <NA>
+ AML12     PAWMKP          Relapsed     RUNX              B2             <NA>               B3                   True             True
+ AML13     PAWNPG          Relapsed     RUNX              B2             <NA>               B3                   True             True
+ AML14     PAULDS          Censored     RUNX              B3             <NA>              NaN                  False             <NA>
+ AML15     PAWWXU          Relapsed     RUNX              B3             <NA>               B3                   True            False
+ AML16     PAUZRT          Relapsed     RUNX              B3             <NA>               B3                   True            False
+ AML17     PAXGDG          Relapsed     CBFB              B2              NaN               B2                   True            False
+ AML18     PAVGJG          Relapsed     CBFB              B2              NaN               B3                   True             True
+ AML19     PAUXCD          Relapsed     CBFB              B2              NaN               B2                   True            False
+  AML2     PAVDYE          Relapsed    KMT2A              B2             <NA>               B3                   True             True
+ AML20     PAUURD          Censored     CBFB              B2             <NA>              NaN                  False             <NA>
+ AML21     PAWHFW          Relapsed      FLT              B2               B2               B2                   True            False
+ AML22     PAVBFN          Relapsed      FLT              B3             <NA>               B3                   True            False
+ AML23     PAXLWH          Relapsed      FLT              B3             <NA>               B2                   True             True
+ AML24     PAXLEE          Relapsed      FLT              B2             <NA>               B3                   True             True
+ AML25     PAUUWT          Relapsed    Other              B2             <NA>               B3                   True             True
+ AML26     PAUVAT          Relapsed    Other              B3             <NA>               B3                   True            False
+ AML27     PAVBCV          Relapsed    Other              B2             <NA>               B2                   True            False
+ AML28     PAVUBN          Relapsed    Other             NaN             <NA>               B3                  False             <NA>
+  AML3     PAUWUZ          Censored    KMT2A              B2             <NA>              NaN                  False             <NA>
+  AML4     PAWHKK          Relapsed    KMT2A              B2              NaN               B3                   True             True
+  AML5     PAWUAE          Relapsed    KMT2A              B1             <NA>               B2                   True             True
+  AML6     PAWNYX          Relapsed    KMT2A              B2             <NA>               B3                   True             True
+  AML7     PAWNPU          Relapsed    KMT2A            <NA>             <NA>               B2                  False             <NA>
+  AML8     PAVJXG          Relapsed    KMT2A              B3             <NA>               B3                   True            False
+  AML9     PAWRVC          Relapsed    KMT2A              B1             <NA>               B2                   True             True
