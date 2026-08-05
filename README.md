@@ -66,6 +66,8 @@ Figures 1–7
 
 Analysis pipeline
 
+⸻
+
 Stage 1
 
 Latent ecological projection
@@ -79,6 +81,8 @@ Main outputs
 Directory
 
 application/pediatric_leukemia/outputs/stage1/
+
+⸻
 
 Stage 2
 
