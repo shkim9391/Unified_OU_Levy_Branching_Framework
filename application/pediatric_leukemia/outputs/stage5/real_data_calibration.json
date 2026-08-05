@@ -1,0 +1,8 @@
+{
+  "n_intervals": 23,
+  "displacement_median": 0.3115395702340894,
+  "displacement_q90": 0.6791244720305536,
+  "displacement_sd": 0.22638386790577045,
+  "dt_median": 1.0,
+  "dt_cv": 0.0
+}
