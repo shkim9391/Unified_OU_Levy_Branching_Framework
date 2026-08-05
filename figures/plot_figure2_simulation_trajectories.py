@@ -527,27 +527,6 @@ def main() -> None:
             upper + padding,
         )
 
-#    fig.suptitle(
-#        "Figure 2. Simulation architecture and representative nested trajectories",
-#        fontsize=20,
-#        fontweight="bold",
-#        color=DARK,
-#        y=0.985,
-#    )
-
-#    fig.text(
-#        0.5,
-#        0.955,
-#        (
-#            "The software generates progressively richer stochastic mechanisms "
-#            "within one shared simulation interface."
-#        ),
-#        ha="center",
-#        fontsize=12.5,
-#        color=GRAY,
-#        style="italic",
-#    )
-
     fig.text(
         0.012,
         0.50,
