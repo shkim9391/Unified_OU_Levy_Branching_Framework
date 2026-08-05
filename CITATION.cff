@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software release and the accompanying methodological paper."
+title: "Unified Ornstein–Uhlenbeck–Lévy–Branching Framework"
+type: software
+version: "1.0.0"
+date-released: "2026-08-05"
+
+authors:
+  - family-names: "Kim"
+    given-names: "Seung-Hwan"
+
+abstract: >-
+  The Unified Ornstein–Uhlenbeck–Lévy–Branching (OULB) Framework is a
+  probabilistic and computational framework for modeling biological evolution
+  through continuous Ornstein–Uhlenbeck dynamics, abrupt Lévy-like transitions,
+  lineage branching, heterogeneous observation models, and Bayesian inference.
+  The repository includes a reproducible pediatric leukemia reference
+  application, simulation benchmarks, regression tests, and scripts for
+  generating all manuscript figures.
+
+keywords:
+  - computational biology
+  - cancer evolution
+  - pediatric leukemia
+  - Ornstein-Uhlenbeck process
+  - Levy process
+  - branching process
+  - Bayesian inference
+  - stochastic processes
+  - single-cell transcriptomics
+  - reproducible research
+
+license: MIT
+repository-code: "https://github.com/shkim9391/Unified_OU_Levy_Branching_Framework"
+
+preferred-citation:
+  type: software
+  title: "Unified Ornstein–Uhlenbeck–Lévy–Branching Framework"
+  version: "1.0.0"
+  date-released: "2026-08-05"
+  authors:
+    - family-names: "Kim"
+      given-names: "Seung-Hwan"
+  repository-code: "https://github.com/shkim9391/Unified_OU_Levy_Branching_Framework"
+
+references:
+  - type: article
+    title: "A Unified Ornstein–Uhlenbeck–Lévy–Branching Framework for Interpretable Modeling of Cancer Evolution"
+    authors:
+      - family-names: "Kim"
+        given-names: "Seung-Hwan"
+    journal: "Mathematical and Computational Biology"
+    status: "in preparation"
