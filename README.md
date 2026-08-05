@@ -277,22 +277,6 @@ The observation model can be replaced to accommodate other biological systems wh
 
 ---
 
-# Documentation
-
-Additional technical documentation is available in
-
-```
-docs/
-
-├── mathematical_framework.pdf
-├── workflow.pdf
-└── manuscript_figures.pdf
-```
-
-These documents provide the mathematical specification, computational workflow, and complete figure-generation guide.
-
----
-
 # Citation
 
 If you use this software in your research, please cite
