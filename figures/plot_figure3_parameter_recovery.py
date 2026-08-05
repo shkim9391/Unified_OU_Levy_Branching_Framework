@@ -360,25 +360,6 @@ def main() -> None:
             )
         plot_panel(ax, panel_points, panel_summary.iloc[0])
 
-#    fig.suptitle(
-#        "Figure 3. Recovery of continuous dynamic parameters",
-#        fontsize=20,
-#        fontweight="bold",
-#        color=DARK,
-#        y=0.985,
-#    )
-#    fig.text(
-#        0.5,
-#        0.955,
-#        (
-#            "Sampling distributions of parameter estimates across 100 simulated "
-#            "replicates at fixed generative values."
-#        ),
-#        ha="center",
-#        fontsize=12.5,
-#        color=GRAY,
-#        style="italic",
-#    )
     fig.text(
         0.012,
         0.50,
