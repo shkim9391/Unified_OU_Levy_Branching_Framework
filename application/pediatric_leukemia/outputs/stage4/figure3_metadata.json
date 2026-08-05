@@ -1,0 +1,22 @@
+{
+  "n_rows": 21,
+  "n_stable": 10,
+  "n_switching": 11,
+  "baseline_median": 1.7805593324962796,
+  "baseline_scale": 0.5616671869479261,
+  "stable_total_q95": 3.8211324276900402,
+  "n_boot": 10000,
+  "seed": 1,
+  "top_jump_candidates": 12,
+  "source_table": "/Users/seung-hwan.kim/Desktop/L\u00e9vy_OU_Branching/gse235063_dx_rel_displacement_table_threshold50.csv",
+  "resolved_columns": {
+    "sample": "sample",
+    "dx_branch": "DX_branch_ge50",
+    "rel_branch": "REL_branch_ge50",
+    "total_disp": "disp_total_6d",
+    "malignant_disp": "disp_malignant_3d",
+    "tme_disp": "disp_tme_3d",
+    "stability": "dx_to_rel_switch",
+    "jump_tier": null
+  }
+}
