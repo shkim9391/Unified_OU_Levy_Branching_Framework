@@ -819,25 +819,6 @@ def main() -> None:
         overall,
     )
 
-#    figure.suptitle(
-#        config["labels"]["title"],
-#        fontsize=17.5,
-#        fontweight="bold",
-#        color=DARK,
-#        y=0.992,
-#    )
-
-#    figure.text(
-#        0.5,
-#        0.965,
-#        config["labels"]["subtitle"],
-#        ha="center",
-#        va="top",
-#        fontsize=11.3,
-#        color=GRAY,
-#        style="italic",
-#    )
-
     figure.text(
         0.055,
         0.935,
