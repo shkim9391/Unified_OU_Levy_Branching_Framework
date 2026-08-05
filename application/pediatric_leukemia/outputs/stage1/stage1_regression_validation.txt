@@ -1,0 +1,8 @@
+Stage 1 regression validation
+========================================================================
+[PASS] Sample projection table: 52 rows; max numeric absolute difference=0
+[PASS] All interval table: 25 rows; max numeric absolute difference=0
+[PASS] Main interval table: 23 rows; max numeric absolute difference=0
+[PASS] Projected H5AD: shape=(221436, 29338); selected obs and obsm outputs agree
+
+All requested Stage 1 regression checks passed.

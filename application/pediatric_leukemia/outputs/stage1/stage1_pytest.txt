@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.9, pytest-9.1.1, pluggy-1.5.0
+rootdir: /Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework
+configfile: pyproject.toml
+testpaths: tests
+plugins: zarr-3.1.5
+collected 6 items
+
+tests/test_dynamics.py ...                                               [ 50%]
+tests/test_projection.py ...                                             [100%]
+
+============================== 6 passed in 0.38s ===============================
