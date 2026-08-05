@@ -668,23 +668,7 @@ def main() -> None:
         ax_f,
         fidelity,
     )
-
-#    fig.suptitle(
-#        config["labels"]["title"],
-#        fontsize=18.5,
-#        fontweight="bold",
-#        color=DARK,
-#        y=0.985,
-#    )
-#    fig.text(
-#        0.5,
-#        0.955,
-#        config["labels"]["subtitle"],
-#        ha="center",
-#        fontsize=11.3,
-#        color=GRAY,
-#        style="italic",
-#    )
+    
     fig.text(
         0.5,
         0.025,
