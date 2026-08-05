@@ -1,0 +1,51 @@
+# Stage 2 application configuration.
+# New outputs are written under the unified repository and do not overwrite
+# the validated legacy Figure 4 or Supplementary Figure S6E-H files.
+
+[dynamic_parameters]
+input_h5ad = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/gse235063_longitudinal_malignant_projected.h5ad"
+main_patients_txt = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/figure3_main_analysis_patients.txt"
+output_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/sample_dynamic_parameters.csv"
+output_attractor_tsv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/dx_attractor_scaffold.tsv"
+scaffold_columns = [
+  "state_HSC",
+  "state_Prog",
+  "state_GMP",
+  "state_MonoDC",
+  "aux_EryBaso",
+  "aux_CLP",
+]
+coordinate_columns = ["PC1", "PC2"]
+reference_timepoint = "DX"
+exploratory_patients = ["AML1"]
+minimum_main_cells = 50
+main_state_count = 4
+phase_order = { DX = 0, EOI_REM = 1, REL = 2 }
+
+[model_comparison]
+input_table = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_dx_rel_displacement_table_threshold50.csv"
+output_prefix = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/Supplementary_Figure_S6E-H_model_comparison"
+metric_column = "disp_total_6d"
+sample_column = "sample"
+stability_column = "dx_to_rel_switch"
+start_branch_column = "DX_branch_ge50"
+end_branch_column = "REL_branch_ge50"
+minimum_per_group = 2
+tail_grid_points = 300
+top_annotate = 5
+dpi = 600
+width = 16.0
+height = 10.0
+metric_axis_label = "DX→REL total displacement (6D)"
+summary_heading = "Supplementary Figure S6E-H model comparison summary"
+write_prepared_input = true
+# Optional row restriction. Leave blank/empty for the validated input table.
+filter_column = ""
+filter_values = []
+
+[legacy_dynamic_parameters]
+output_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_4/derived/sample_dynamic_parameters.csv"
+output_attractor_tsv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_4/derived/dx_attractor_scaffold.tsv"
+
+[legacy_model_comparison]
+output_prefix = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/Supplementary_Figure_S6E-H_model_comparison"

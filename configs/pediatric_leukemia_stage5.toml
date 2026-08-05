@@ -1,0 +1,20 @@
+[paths]
+output_dir = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage5"
+interval_table = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/patient_interval_metrics_main.csv"
+
+[benchmark]
+seed = 20260803
+replicates = 100
+n_observations = 20
+followup = 5.0
+jump_z_threshold = 3.0
+
+[calibration]
+displacement_column = "displacement_hd"
+dt_column = ""
+
+[stress_test]
+n_observations = [5, 10, 20, 40]
+noise_sd = [0.0, 0.1, 0.25, 0.5]
+missing_probability = [0.0, 0.1, 0.3]
+interval_pattern = ["regular", "irregular"]

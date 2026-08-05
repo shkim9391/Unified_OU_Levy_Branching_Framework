@@ -1,0 +1,23 @@
+[projection]
+reference_h5ad = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_2/dx_primary_training_malignant_frozen_transfer.h5ad"
+query_h5ad = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/gse235063_longitudinal_malignant_raw.h5ad"
+manifest_csv = "/Users/seung-hwan.kim/Desktop/Ecotype_OU_Branching/GSE235063/GSE235063_RAW/longitudinal_cohort_manifest_processed.csv"
+metadata_root = "/Users/seung-hwan.kim/Desktop/Ecotype_OU_Branching/GSE235063/GSE235063_RAW"
+# Leave empty to use ref.uns["transfer_frozen"]["frozen_score_source"].
+reference_scores_csv = ""
+output_projected_h5ad = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/gse235063_longitudinal_malignant_projected.h5ad"
+output_sample_scores_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/longitudinal_frozen_sample_scores.csv"
+metadata_separator = "\t"
+metadata_compression = "gzip"
+
+[intervals]
+centroids_all_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/patient_timepoint_centroids_all.csv"
+centroids_main_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/patient_timepoint_centroids_main.csv"
+output_intervals_all_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/patient_interval_metrics_all.csv"
+output_intervals_main_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/patient_interval_metrics_main.csv"
+
+[legacy]
+projected_h5ad = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/inputs/gse235063_longitudinal_malignant_projected.h5ad"
+sample_scores_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/longitudinal_frozen_sample_scores.csv"
+intervals_all_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/patient_interval_metrics_all.csv"
+intervals_main_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/patient_interval_metrics_main.csv"

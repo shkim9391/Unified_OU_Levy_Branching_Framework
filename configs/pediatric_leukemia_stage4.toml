@@ -1,0 +1,25 @@
+[paths]
+output_dir = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage4"
+
+[figure3_non_gaussian]
+input_table = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_dx_rel_displacement_table_threshold50.csv"
+output_name = "Supplementary_Figure_S6A-D_upper_tail_table_backed"
+subset_query = ""
+top_annotate = 5
+top_jump_candidates = 12
+bootstraps = 10000
+seed = 1
+dpi = 600
+width = 15.5
+height = 10.0
+
+[figure4_model_comparison]
+model_comparison_table = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/Supplementary_Figure_S6E-H_model_comparison_model_comparison.csv"
+parameter_summary_table = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/Supplementary_Figure_S6E-H_model_comparison_parameter_summary.csv"
+tail_fit_table = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/Supplementary_Figure_S6E-H_model_comparison_tail_fit_grid.csv"
+casewise_table = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/Supplementary_Figure_S6E-H_model_comparison_casewise_loglik_gain.csv"
+output_name = "Supplementary_Figure_S6E-H_model_comparison_table_backed"
+top_annotate = 5
+dpi = 600
+width = 16.0
+height = 10.0

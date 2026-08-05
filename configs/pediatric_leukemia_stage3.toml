@@ -1,0 +1,98 @@
+# Stage 3 application configuration.
+# New outputs are written under the unified repository and do not overwrite
+# validated Figure 3, Figure 5, or threshold-sensitivity files.
+
+[jump_candidates]
+input_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/patient_interval_metrics_main.csv"
+output_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/relapse_jump_candidates.csv"
+interval_column = "interval_class"
+interval_value = "DX_to_REL"
+displacement_hd_column = "displacement_hd"
+displacement_2d_column = "displacement_2d"
+branch_switch_column = "branch_switch"
+branch_weight = 0.50
+switching_label = "Branch-switching"
+continuous_label = "Branch-continuous"
+
+[branch_tables]
+interval_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/patient_interval_metrics_main.csv"
+jump_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/relapse_jump_candidates.csv"
+sample_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage2/sample_dynamic_parameters.csv"
+output_transition_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/branch_transition_table.csv"
+output_ecology_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/branch_ecology_summary.csv"
+output_program_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/branch_scaffold_program_summary.csv"
+output_risk_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/branch_escape_risk_summary.csv"
+output_stats_tsv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/figure5_stats_summary.tsv"
+interval_value = "DX_to_REL"
+branch_order = [
+  "HSC-like basin",
+  "Progenitor-like basin",
+  "GMP-like basin",
+  "Mono/DC-like basin",
+]
+scaffold_columns = [
+  "state_HSC",
+  "state_Prog",
+  "state_GMP",
+  "state_MonoDC",
+  "aux_EryBaso",
+  "aux_CLP",
+]
+
+[threshold_sensitivity]
+input_csv = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_longitudinal_branch_projection.csv"
+output_counts_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_branch_counts_by_timepoint_thresholds.csv"
+output_transition_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_dx_to_rel_transition_summary_by_threshold.csv"
+output_patient_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_patient_branch_table_by_threshold.csv"
+output_switch_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_dx_to_rel_switch_rates_by_threshold.csv"
+output_summary_txt = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_transition_summary_threshold_sensitivity.txt"
+output_switch_png = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_dx_to_rel_switch_rates_by_threshold.png"
+output_counts_png = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_branch_counts_dx_rel_by_threshold.png"
+# Optional provenance output not present in the legacy script.
+output_projected_csv = "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/gse235063_longitudinal_branch_projection_threshold_assignments.csv"
+write_projected_table = true
+thresholds = [20, 50, 100]
+sample_column = "sample"
+patient_column = "Patient_ID"
+sample_id_column = "sample_id"
+timepoint_column = "timepoint"
+time_index_column = "time_index"
+malignant_cells_column = "malignant_cells"
+projection_eligible_column = "projection_eligible"
+branch_distance_columns = ["dist_B1", "dist_B2", "dist_B3"]
+branch_labels = ["B1", "B2", "B3"]
+state_columns = [
+  "ilr_stem_vs_committed",
+  "ilr_prog_vs_mature",
+  "ilr_gmp_vs_monodc",
+  "T_NK_given_known_z",
+  "Myeloid_APC_given_known_z",
+  "B_Plasma_given_known_z",
+]
+metadata_columns = ["Biopsy_Origin", "Subgroup", "Treatment_Outcome"]
+diagnosis_timepoint = "DX"
+remission_timepoint = "REM"
+relapse_timepoint = "REL"
+summary_heading = "GSE235063 transition summary and threshold sensitivity"
+dpi = 300
+switch_width = 6.0
+switch_height = 4.0
+counts_width = 10.0
+counts_height = 4.0
+
+[legacy_jump_candidates]
+output_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_3/derived/relapse_jump_candidates.csv"
+
+[legacy_branch_tables]
+output_transition_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_5/derived/branch_transition_table.csv"
+output_ecology_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_5/derived/branch_ecology_summary.csv"
+output_program_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_5/derived/branch_scaffold_program_summary.csv"
+output_risk_csv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_5/derived/branch_escape_risk_summary.csv"
+output_stats_tsv = "/Users/seung-hwan.kim/Desktop/Multimodal_OU_Lévy_Branching_Scaffold/Figure_5/derived/figure5_stats_summary.tsv"
+
+[legacy_threshold_sensitivity]
+output_counts_csv = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_branch_counts_by_timepoint_thresholds.csv"
+output_transition_csv = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_dx_to_rel_transition_summary_by_threshold.csv"
+output_patient_csv = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_patient_branch_table_by_threshold.csv"
+output_switch_csv = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_dx_to_rel_switch_rates_by_threshold.csv"
+output_summary_txt = "/Users/seung-hwan.kim/Desktop/Lévy_OU_Branching/gse235063_transition_summary_threshold_sensitivity.txt"
