@@ -572,26 +572,6 @@ def main() -> None:
             ha="left",
         )
 
-#    fig.suptitle(
-#        "Figure 4. Recovery limits of discontinuous and branching dynamics",
-#        fontsize=20,
-#        fontweight="bold",
-#        y=0.975,
-#    )
-
-#    fig.text(
-#        0.5,
-#        0.947,
-#        (
-#            "Recovery improves with stronger discontinuous signals and greater "
-#            "branch separation, and deteriorates with observation noise."
-#        ),
-#        ha="center",
-#        fontsize=12.2,
-#        color=GRAY,
-#        style="italic",
-#    )
-
     fig.text(
         0.5,
         0.035,
