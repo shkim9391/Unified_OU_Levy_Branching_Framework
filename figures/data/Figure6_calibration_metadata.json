@@ -1,0 +1,31 @@
+{
+  "figure": "Figure 6",
+  "title": "Real-data calibration",
+  "source_files": {
+    "interval_table": "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage1/patient_interval_metrics_main.csv",
+    "jump_table": "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/relapse_jump_candidates.csv",
+    "branch_transition_table": "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage3/branch_transition_table.csv",
+    "stage5_calibration_json": "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage5/real_data_calibration.json"
+  },
+  "resolved_columns": {
+    "patient": "patient_id",
+    "dt": "_figure6_dt",
+    "displacement": "displacement_hd"
+  },
+  "simulation_seed": 20260803,
+  "n_replicates": 500,
+  "scenario_order": [
+    "retention",
+    "jump",
+    "branch_reorganization"
+  ],
+  "archived_rows": {
+    "empirical": 21,
+    "parameters": 10,
+    "trajectories": 10184,
+    "events": 336,
+    "comparison": 3507,
+    "fidelity": 7
+  },
+  "interpretation_note": "Empirical data calibrate the observation architecture and characteristic dynamical scales. Parameters not identifiable from sparse intervals are explicitly marked as prespecified."
+}

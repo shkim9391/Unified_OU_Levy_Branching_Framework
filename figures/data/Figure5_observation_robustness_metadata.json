@@ -1,0 +1,36 @@
+{
+  "figure": "Figure 5",
+  "title": "Figure 5. Measurement-aware inference improves robustness under realistic observation processes",
+  "subtitle": "Explicit observation-error modeling improves OU parameter recovery across sparse, irregular, noisy, and incomplete sampling designs.",
+  "source_file": "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage5/stress_test_results.csv",
+  "source_rows": 936,
+  "archived_rows": {
+    "replicates": 936,
+    "summary": 96,
+    "overall": 6
+  },
+  "tested_conditions": {
+    "n_observations": [
+      5,
+      10,
+      20,
+      40
+    ],
+    "noise_sd": [
+      0.0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "missing_probability": [
+      0.0,
+      0.1,
+      0.3
+    ],
+    "interval_pattern": [
+      "irregular",
+      "regular"
+    ]
+  },
+  "improvement_sign_convention": "Positive values favor measurement-aware estimation."
+}

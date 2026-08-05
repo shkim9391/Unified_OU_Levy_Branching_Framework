@@ -1,0 +1,44 @@
+{
+  "figure": "Figure 2",
+  "purpose": "Representative archived trajectories for the nested OU-L\u00e9vy-Branching mechanisms.",
+  "source_modules": [
+    "src/oulb/simulation.py",
+    "src/oulb/observation.py"
+  ],
+  "source_config": "configs/pediatric_leukemia_stage5.toml",
+  "base_seed": 20260803,
+  "scenario_seeds": {
+    "brownian": 20260804,
+    "ou": 20260805,
+    "shifted_ou": 20260806,
+    "ou_jump": 20260810,
+    "ou_branching": 20260810,
+    "full_oulb": 20260812
+  },
+  "followup": 5.0,
+  "n_latent": 241,
+  "observation_spec": {
+    "noise_sd": 0.1,
+    "missing_probability": 0.55,
+    "retain_endpoints": true
+  },
+  "treatment_time": 2.4,
+  "scenario_order": [
+    "brownian",
+    "ou",
+    "shifted_ou",
+    "ou_jump",
+    "ou_branching",
+    "full_oulb"
+  ],
+  "scenario_labels": {
+    "brownian": "Brownian drift",
+    "ou": "Standard OU",
+    "shifted_ou": "Treatment-shifted OU",
+    "ou_jump": "OU with compound-Poisson jumps",
+    "ou_branching": "OU with branch switching",
+    "full_oulb": "Full OU-L\u00e9vy-Branching"
+  },
+  "trajectory_rows": 1446,
+  "event_rows": 9
+}

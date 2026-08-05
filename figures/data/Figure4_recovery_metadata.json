@@ -1,0 +1,64 @@
+{
+  "figure": "Figure 4",
+  "title": "Recovery limits of discontinuous and branching dynamics",
+  "config": "configs/figure4_recovery_limits.toml",
+  "mode": "final",
+  "replicate_key": "replicates_final",
+  "jump_replicate_rows": 8100,
+  "jump_summary_rows": 162,
+  "branch_replicate_rows": 19200,
+  "branch_summary_rows": 384,
+  "representative_examples": [
+    {
+      "example_id": "J_success",
+      "example_type": "jump_success",
+      "mechanism": "jump",
+      "selection_metric": "f1",
+      "selection_value": 1.0,
+      "eligibility_rule": "n_true_jumps >= 1",
+      "replicate": 40,
+      "seed": 219311
+    },
+    {
+      "example_id": "J_failure",
+      "example_type": "jump_failure",
+      "mechanism": "jump",
+      "selection_metric": "f1",
+      "selection_value": 0.0,
+      "eligibility_rule": "n_true_jumps >= 1",
+      "replicate": 25,
+      "seed": 2067874
+    },
+    {
+      "example_id": "B_success",
+      "example_type": "branch_success",
+      "mechanism": "branch",
+      "selection_metric": "adjusted_rand_index",
+      "selection_value": 1.0,
+      "eligibility_rule": "n_true_transitions >= 1",
+      "replicate": 33,
+      "seed": 7441463
+    },
+    {
+      "example_id": "B_failure",
+      "example_type": "branch_failure",
+      "mechanism": "branch",
+      "selection_metric": "adjusted_rand_index",
+      "selection_value": -0.13095238095238085,
+      "eligibility_rule": "n_true_transitions >= 1",
+      "replicate": 36,
+      "seed": 6097556
+    }
+  ],
+  "display_slice": {
+    "jump_n_observations": 40,
+    "jump_diffusion_sigma": 0.2,
+    "jump_rate": 0.25,
+    "branch_n_observations": 40,
+    "branch_diffusion_sigma": 0.2,
+    "switching_rate": 0.15,
+    "heatmap_vmin": 0.0,
+    "heatmap_vmax": 1.0
+  },
+  "selection_is_upstream": true
+}

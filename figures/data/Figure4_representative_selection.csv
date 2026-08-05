@@ -1,0 +1,5 @@
+example_id,example_type,mechanism,selection_metric,selection_value,eligibility_rule,replicate,seed
+J_success,jump_success,jump,f1,1.0,n_true_jumps >= 1,40,219311
+J_failure,jump_failure,jump,f1,0.0,n_true_jumps >= 1,25,2067874
+B_success,branch_success,branch,adjusted_rand_index,1.0,n_true_transitions >= 1,33,7441463
+B_failure,branch_failure,branch,adjusted_rand_index,-0.13095238095238085,n_true_transitions >= 1,36,6097556

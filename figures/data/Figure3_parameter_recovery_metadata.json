@@ -1,0 +1,61 @@
+{
+  "figure": "Figure 3",
+  "title": "Recovery of continuous dynamic parameters",
+  "source_files": [
+    "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage5/parameter_recovery.csv",
+    "/Users/seung-hwan.kim/Unified_OU_Levy_Branching_Framework/application/pediatric_leukemia/outputs/stage5/recovery_summary.csv"
+  ],
+  "source_rows": {
+    "parameter_recovery": 900,
+    "recovery_summary": 9
+  },
+  "archived_rows": {
+    "points": 600,
+    "summary": 6
+  },
+  "panel_specification": [
+    {
+      "panel": "A",
+      "scenario": "brownian",
+      "parameter": "drift",
+      "panel_title": "Brownian drift recovery",
+      "symbol": "$\\beta$"
+    },
+    {
+      "panel": "B",
+      "scenario": "brownian",
+      "parameter": "sigma",
+      "panel_title": "Brownian diffusion recovery",
+      "symbol": "$\\sigma$"
+    },
+    {
+      "panel": "C",
+      "scenario": "ou",
+      "parameter": "theta",
+      "panel_title": "Standard OU $\\theta$ recovery",
+      "symbol": "$\\theta$"
+    },
+    {
+      "panel": "D",
+      "scenario": "ou",
+      "parameter": "mu",
+      "panel_title": "Standard OU $\\mu$ recovery",
+      "symbol": "$\\mu$"
+    },
+    {
+      "panel": "E",
+      "scenario": "ou",
+      "parameter": "sigma",
+      "panel_title": "Standard OU $\\sigma$ recovery",
+      "symbol": "$\\sigma$"
+    },
+    {
+      "panel": "F",
+      "scenario": "shifted_ou",
+      "parameter": "delta",
+      "panel_title": "Treatment-shift $\\Delta$ recovery",
+      "symbol": "$\\Delta$"
+    }
+  ],
+  "boundary_note": "Baseline Stage 5 recovery tables do not archive optimizer boundary-hit flags. Boundary-hit rates should be shown in a stress-test figure unless those flags are archived upstream."
+}

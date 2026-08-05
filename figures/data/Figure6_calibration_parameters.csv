@@ -1,0 +1,11 @@
+quantity,value,provenance,description
+n_empirical_intervals,23.0,Empirical,Intervals contributing to calibration
+median_interval_duration,1.0,Empirical,Median positive observation interval
+displacement_sd,0.22638386790577045,Derived,Characteristic continuous fluctuation scale
+displacement_q90,0.6791244720305536,Empirical,Upper-tail displacement scale
+jump_scale,0.3675849017964642,Derived,Compound-Poisson jump magnitude scale
+jump_rate,0.043478260869565216,Prespecified from empirical scale,Rare-event intensity used in calibration simulations
+branch_switch_fraction,0.5714285714285714,Empirical,Observed interval-level branch-switch prevalence
+branch_switch_rate,0.8472978603872036,Derived,Continuous-time switching-rate approximation
+branch_separation,0.6791244720305536,Derived,Attractor separation on the calibrated state scale
+theta,0.8,Prespecified,Restoring-rate setting for calibrated simulation

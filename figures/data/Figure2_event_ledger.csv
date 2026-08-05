@@ -1,0 +1,10 @@
+scenario,scenario_label,event,interval,event_time,time_start,time_end,n_jumps,magnitude,from,to,scenario_order
+ou_jump,OU with compound-Poisson jumps,jump,36,0.7708333333333333,0.75,0.7708333333333333,1.0,0.1163491680503152,,,4
+ou_jump,OU with compound-Poisson jumps,jump,39,0.8333333333333333,0.8125,0.8333333333333333,1.0,0.317415953436266,,,4
+ou_branching,OU with branch switching,branch_transition,37,0.7916666666666666,0.7708333333333333,0.7916666666666666,,,0.0,1.0,5
+ou_branching,OU with branch switching,branch_transition,198,4.145833333333333,4.125,4.145833333333333,,,1.0,0.0,5
+full_oulb,Full OU-Lévy-Branching,branch_transition,65,1.375,1.3541666666666665,1.375,,,0.0,1.0,6
+full_oulb,Full OU-Lévy-Branching,jump,108,2.270833333333333,2.25,2.270833333333333,1.0,0.8252134807693248,,,6
+full_oulb,Full OU-Lévy-Branching,jump,136,2.8541666666666665,2.833333333333333,2.8541666666666665,1.0,0.4819148462933836,,,6
+full_oulb,Full OU-Lévy-Branching,branch_transition,165,3.458333333333333,3.4375,3.458333333333333,,,1.0,0.0,6
+full_oulb,Full OU-Lévy-Branching,branch_transition,175,3.6666666666666665,3.645833333333333,3.6666666666666665,,,0.0,1.0,6
