@@ -1,0 +1,27 @@
+Supplementary Figure S6E-H model comparison summary
+========================================
+
+Best Gaussian model: Gaussian branch-aware (M1)
+Best heavy-tail model: Student-t branch-aware (M3)
+
+Model ranking by AICc:
+  M3 | Student-t branch-aware | AICc=82.1729 | ΔAICc=0.0000 | weight=0.7788
+  M1 | Gaussian branch-aware | AICc=84.6926 | ΔAICc=2.5196 | weight=0.2209
+  M0 | Gaussian pooled | AICc=98.5821 | ΔAICc=16.4092 | weight=0.0002
+  M2 | Student-t pooled | AICc=101.3267 | ΔAICc=19.1538 | weight=0.0001
+
+Parameters:
+  M0 | mu = 3.817031
+  M0 | sigma = 2.264024
+  M1 | mu_stable = 2.086602
+  M1 | mu_switching = 5.390149
+  M1 | sigma_stable = 1.018601
+  M1 | sigma_switching = 1.909329
+  M2 | mu = 3.799334
+  M2 | sigma = 2.243901
+  M2 | nu = 112.387822
+  M3 | mu_stable = 1.733581
+  M3 | mu_switching = 4.788100
+  M3 | sigma_stable = 0.405217
+  M3 | sigma_switching = 1.238752
+  M3 | nu = 2.070024

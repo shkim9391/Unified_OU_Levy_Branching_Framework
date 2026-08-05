@@ -1,0 +1,15 @@
+model_id,model_label,parameter,value
+M0,Gaussian pooled,mu,3.8170312094080083
+M0,Gaussian pooled,sigma,2.2640242007201397
+M1,Gaussian branch-aware,mu_stable,2.0866019412299255
+M1,Gaussian branch-aware,mu_switching,5.390148725506452
+M1,Gaussian branch-aware,sigma_stable,1.0186011135027122
+M1,Gaussian branch-aware,sigma_switching,1.9093286805594418
+M2,Student-t pooled,mu,3.799333993893338
+M2,Student-t pooled,sigma,2.243900513377871
+M2,Student-t pooled,nu,112.38782169260976
+M3,Student-t branch-aware,mu_stable,1.7335812464096765
+M3,Student-t branch-aware,mu_switching,4.788099555932634
+M3,Student-t branch-aware,sigma_stable,0.40521730880389123
+M3,Student-t branch-aware,sigma_switching,1.2387520484479053
+M3,Student-t branch-aware,nu,2.070023695287477

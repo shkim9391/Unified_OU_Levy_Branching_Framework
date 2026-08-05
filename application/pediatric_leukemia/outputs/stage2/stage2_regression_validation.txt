@@ -1,0 +1,11 @@
+Stage 2 regression validation
+========================================================================
+[PASS] Sample dynamic parameter table: 52 rows; max numeric absolute difference=0
+[PASS] DX attractor table: 6 rows; max numeric absolute difference=0
+[PASS] Model comparison table: 4 rows; max numeric absolute difference=0
+[PASS] Model parameter table: 14 rows; max numeric absolute difference=0
+[PASS] Tail-fit grid: 300 rows; max numeric absolute difference=0
+[PASS] Case-wise log-likelihood table: 21 rows; max numeric absolute difference=0
+[PASS] Model fit summary text: 27 lines agree
+
+All requested Stage 2 regression checks passed.
