@@ -1,265 +1,319 @@
-Unified Ornstein–Uhlenbeck–Lévy–Branching Framework
-
-Overview
-
-This repository implements the Unified Ornstein–Uhlenbeck–Lévy–Branching (OULB) Framework, a general probabilistic framework for modeling biological evolution that integrates
-
-* continuous constrained dynamics (Ornstein–Uhlenbeck processes),
-* abrupt evolutionary transitions (Lévy jump processes),
-* lineage diversification (branching processes),
-* heterogeneous observation models, and
-* Bayesian statistical inference
-
-within a single mathematical architecture.
-
-Although the framework is applicable to many biological systems, this repository demonstrates its implementation using longitudinal pediatric leukemia data as the reference application.
-
-⸻
-
-Repository organization
-
-The repository consists of two major components.
-
-1. Reference application
-
-application/pediatric_leukemia/
-
-implements the complete five-stage analysis pipeline used in the accompanying manuscript.
-
-2. Framework validation
-
-figures/
-
-contains simulation studies reproducing all methodological figures.
-
-Computational workflow
-
-Raw observations
-        │
-        ▼
-Stage 1
-Latent ecological projection
-
-        │
-        ▼
-Stage 2
-Continuous OU parameter estimation
-
-        │
-        ▼
-Stage 3
-Jump and branching inference
-
-        │
-        ▼
-Stage 4
-Statistical validation
-
-        │
-        ▼
-Stage 5
-Simulation benchmarking
-
-        │
-        ▼
-Figures 1–7
-
-Analysis pipeline
-
-⸻
-
-Stage 1
-
-Latent ecological projection
-
-Main outputs
-
-* projected latent states
-* patient interval metrics
-* frozen ecological scaffold
-
-Directory
-
-application/pediatric_leukemia/outputs/stage1/
-
-⸻
-
-Stage 2
-
-Continuous evolutionary dynamics
-
-This stage estimates
-
-* OU attractors
-* restoring strengths
-* diffusion parameters
-* model comparisons
-
-Outputs include
-
-* dynamic parameters
-* Supplementary Figure S6
-* regression validation
-
-⸻
-
-Stage 3
-
-Discrete evolutionary events
-
-This stage detects
-
-* Lévy jump candidates
-* branch switching
-* ecological transitions
-* escape risk
-
-Outputs include
-
-* relapse jump tables
-* branch summaries
-* threshold sensitivity analyses
-
-⸻
-
-Stage 4
-
-Statistical validation
-
-Produces
-
-* effect sizes
-* QQ analyses
-* ranked displacement
-* publication-ready Figure 3 tables
-
-⸻
-
-Stage 5
-
-Simulation benchmarking
-
-Evaluates
-
-* parameter recovery
-* jump detection accuracy
-* branch recovery
-* calibration to empirical data
-* stress testing
-
-⸻
-
-Figures
-
-The repository reproduces every figure in the manuscript.
-
-Figure
-
-Description
-
-Figure 1
-
-Unified OULB architecture
-
-Figure 2
-
-Simulation trajectories
-
-Figure 3
-
-Continuous parameter recovery
-
-Figure 4
-
-Recovery limits for jumps and branching
-
-Figure 5
-
-Observation-model robustness
-
-Figure 6
-
-Calibration to pediatric leukemia
-
-Figure 7
-
-Unified computational workflow
-
-Running the framework
-
-The complete reference analysis is executed sequentially.
-
-bash application/pediatric_leukemia/run_stage1.sh
-
-bash application/pediatric_leukemia/run_stage2.sh
-
-bash application/pediatric_leukemia/run_stage3.sh
-
-bash application/pediatric_leukemia/run_stage4.sh
-
-bash application/pediatric_leukemia/run_stage5.sh
-
-Each stage generates regression validation files, SHA256 checksums, and reproducible outputs.
-
-⸻
-
-Validation
-
-Regression tests
-
-python -m pytest
-
-Integrity verification
-
-shasum -a 256 *
-
-ensures all published outputs match the released repository.
-
-⸻
-
-Mathematical framework
-
-The latent state evolves according to
-
-dX_t
-=
-\theta(\mu-X_t)\,dt
-+
-\sigma\,dW_t
-+
-dL_t
-+
-dB_t,
-
-where
-
-* \theta governs mean reversion,
-* \mu is the attractor,
-* dW_t denotes Brownian diffusion,
-* dL_t represents Lévy jump processes,
-* dB_t denotes branching events.
-
-Observation models map latent trajectories to measured biological data while accounting for measurement noise and irregular sampling.
-
-⸻
-
-Reference application
-
-The pediatric leukemia workflow demonstrates inference from longitudinal single-cell transcriptomic data through
-
-1. ecological projection,
-2. latent-state estimation,
-3. continuous dynamics,
-4. evolutionary jumps,
-5. lineage branching,
-6. simulation-based validation.
-
-The same computational framework can be adapted to other biological systems by replacing the observation model while retaining the latent OULB process.
-
-⸻
-
-Citation
-
-If you use this software, please cite:
-
-Kim S-H. A Unified Ornstein–Uhlenbeck–Lévy–Branching Framework for Interpretable Modeling of Cancer Evolution. Mathematical and Computational Biology (in preparation).
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # Unified Ornstein\'96Uhlenbeck\'96L\'e9vy\'96Branching (OULB) Framework\
+\
+> A unified probabilistic framework for interpretable modeling of biological evolution through continuous dynamics, L\'e9vy jump processes, branching evolution, and Bayesian inference.\
+\
+---\
+\
+## Overview\
+\
+The **Unified Ornstein\'96Uhlenbeck\'96L\'e9vy\'96Branching (OULB) Framework** provides a general mathematical and computational framework for modeling biological evolution across multiple spatial and temporal scales. Rather than treating continuous dynamics, abrupt evolutionary transitions, lineage diversification, and measurement uncertainty as separate problems, OULB integrates these mechanisms within a single latent-state representation.\
+\
+The framework combines\
+\
+- **continuous constrained dynamics** using Ornstein\'96Uhlenbeck (OU) processes,\
+- **abrupt evolutionary transitions** using L\'e9vy-like jump processes,\
+- **lineage diversification** through branching processes,\
+- **flexible observation models** for heterogeneous biological measurements, and\
+- **Bayesian statistical inference** for parameter estimation and uncertainty quantification.\
+\
+Although applicable to many biological systems, this repository demonstrates the framework using **longitudinal pediatric leukemia** as a reference application.\
+\
+---\
+\
+# Repository Organization\
+\
+The repository is organized into three primary components.\
+\
+```\
+application/\
+```\
+\
+Reference biological applications implementing the complete OULB inference workflow.\
+\
+```\
+figures/\
+```\
+\
+Simulation studies and scripts reproducing every figure in the accompanying manuscript.\
+\
+```\
+src/\
+```\
+\
+Core implementation of the reusable OULB framework.\
+\
+Additional directories include\
+\
+```\
+configs/\
+tests/\
+docs/\
+data/\
+```\
+\
+for configuration files, regression testing, documentation, and datasets.\
+\
+---\
+\
+# Computational Workflow\
+\
+```\
+Raw observations\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Stage 1\
+Latent ecological projection\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Stage 2\
+Continuous OU parameter estimation\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Stage 3\
+L\'e9vy jump and branching inference\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Stage 4\
+Statistical validation\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Stage 5\
+Simulation benchmarking\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Publication Figures\
+        \uc0\u9474 \
+        \uc0\u9660 \
+Biological interpretation\
+```\
+\
+---\
+\
+# Analysis Pipeline\
+\
+## Stage 1 \'97 Latent Ecological Projection\
+\
+Projects biological observations into a common latent scaffold.\
+\
+**Primary outputs**\
+\
+- projected latent states\
+- patient interval metrics\
+- frozen ecological scaffold\
+\
+```\
+application/pediatric_leukemia/outputs/stage1/\
+```\
+\
+---\
+\
+## Stage 2 \'97 Continuous Evolutionary Dynamics\
+\
+Estimates continuous stochastic dynamics using Ornstein\'96Uhlenbeck models.\
+\
+**Estimated quantities**\
+\
+- attractor locations\
+- restoring strengths\
+- diffusion parameters\
+- model comparison statistics\
+\
+**Outputs**\
+\
+- dynamic parameter estimates\
+- Supplementary Figure S6\
+- regression validation reports\
+\
+---\
+\
+## Stage 3 \'97 L\'e9vy Jump and Branching Inference\
+\
+Identifies discontinuous evolutionary events and lineage diversification.\
+\
+**Detected events**\
+\
+- L\'e9vy jump candidates\
+- branch transitions\
+- ecological state switching\
+- evolutionary escape risk\
+\
+**Outputs**\
+\
+- relapse jump tables\
+- branch summaries\
+- threshold sensitivity analyses\
+\
+---\
+\
+## Stage 4 \'97 Statistical Validation\
+\
+Performs statistical evaluation of inferred evolutionary dynamics.\
+\
+Outputs include\
+\
+- effect sizes\
+- QQ analyses\
+- ranked displacement statistics\
+- publication-ready Figure 3 summary tables\
+\
+---\
+\
+## Stage 5 \'97 Simulation Benchmarking\
+\
+Evaluates the statistical performance of the framework through simulation.\
+\
+Benchmark analyses include\
+\
+- parameter recovery\
+- jump detection accuracy\
+- branch recovery\
+- calibration to empirical data\
+- stress testing\
+- estimator comparison\
+\
+---\
+\
+# Manuscript Figures\
+\
+The repository reproduces every figure included in the accompanying methodological manuscript.\
+\
+| Figure | Description |\
+|---------|-------------|\
+| **Figure 1** | Unified OULB architecture |\
+| **Figure 2** | Representative simulation trajectories |\
+| **Figure 3** | Continuous parameter recovery |\
+| **Figure 4** | Recovery limits for jump and branching inference |\
+| **Figure 5** | Observation-model robustness |\
+| **Figure 6** | Calibration to pediatric leukemia data |\
+| **Figure 7** | Unified computational workflow |\
+\
+---\
+\
+# Running the Framework\
+\
+The complete reference analysis is executed sequentially.\
+\
+```bash\
+bash application/pediatric_leukemia/run_stage1.sh\
+\
+bash application/pediatric_leukemia/run_stage2.sh\
+\
+bash application/pediatric_leukemia/run_stage3.sh\
+\
+bash application/pediatric_leukemia/run_stage4.sh\
+\
+bash application/pediatric_leukemia/run_stage5.sh\
+```\
+\
+Each stage produces\
+\
+- reproducible intermediate outputs\
+- regression validation reports\
+- SHA256 integrity checks\
+- publication-ready figures and tables\
+\
+---\
+\
+# Validation\
+\
+Run the complete regression test suite\
+\
+```bash\
+python -m pytest\
+```\
+\
+Verify output integrity\
+\
+```bash\
+shasum -a 256 *\
+```\
+\
+These procedures ensure that all released outputs exactly match the archived repository version.\
+\
+---\
+\
+# Mathematical Framework\
+\
+The latent biological state evolves according to\
+\
+$begin:math:display$\
+dX\\_t\
+\\=\
+\\\\theta\\(\\\\mu\\-X\\_t\\)\\\\\\,dt\
+\\+\
+\\\\sigma\\\\\\,dW\\_t\
+\\+\
+dL\\_t\
+\\+\
+dB\\_t\\,\
+$end:math:display$\
+\
+where\
+\
+| Symbol | Interpretation |\
+|---------|----------------|\
+| $\\theta$ | Mean-reversion strength |\
+| $\\mu$ | Evolutionary attractor |\
+| $dW_t$ | Brownian diffusion |\
+| $dL_t$ | L\'e9vy jump process |\
+| $dB_t$ | Branching process |\
+\
+Observation models map latent trajectories to measured biological observations while explicitly accounting for measurement uncertainty, irregular sampling, and heterogeneous experimental technologies.\
+\
+---\
+\
+# Reference Application\
+\
+The reference implementation analyzes longitudinal pediatric leukemia through\
+\
+1. latent ecological projection,\
+2. continuous evolutionary dynamics,\
+3. L\'e9vy jump inference,\
+4. lineage branching,\
+5. Bayesian parameter estimation,\
+6. simulation-based validation.\
+\
+The observation model can be replaced to accommodate other biological systems while retaining the same latent OULB process, making the framework broadly applicable to developmental biology, microbial evolution, ecology, and phylogenetic comparative analyses.\
+\
+---\
+\
+# Documentation\
+\
+Additional technical documentation is available in\
+\
+```\
+docs/\
+\
+\uc0\u9500 \u9472 \u9472  mathematical_framework.pdf\
+\uc0\u9500 \u9472 \u9472  workflow.pdf\
+\uc0\u9492 \u9472 \u9472  manuscript_figures.pdf\
+```\
+\
+These documents provide the mathematical specification, computational workflow, and complete figure-generation guide.\
+\
+---\
+\
+# Citation\
+\
+If you use this software in your research, please cite\
+\
+> **Kim S-H.** *A Unified Ornstein\'96Uhlenbeck\'96L\'e9vy\'96Branching Framework for Interpretable Modeling of Cancer Evolution.* *Mathematical and Computational Biology* (in preparation).\
+\
+---\
+\
+# License\
+\
+This repository is distributed under the MIT License.\
+\
+---\
+\
+# Acknowledgments\
+\
+Development of the Unified OULB Framework was motivated by methodological challenges in modeling stochastic biological evolution across continuous, discontinuous, and branching processes. The pediatric leukemia application serves as the reference implementation demonstrating the flexibility and reproducibility of the framework.}
