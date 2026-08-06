@@ -68,3 +68,14 @@ dependencies:
       # available at compatible versions through Conda.
       - pingouin>=0.5.4,<1
       - scikit-posthocs>=0.9,<1
+ 
+  preferred-citation:
+  type: software
+  title: "Unified Ornstein–Uhlenbeck–Lévy–Branching Framework"
+  version: "1.0.1"
+  doi: "10.5281/zenodo.21827910"
+  url: "https://doi.org/10.5281/zenodo.21827910"
+  date-released: "2026-08-06"
+  authors:
+    - family-names: "Kim"
+      given-names: "Seung-Hwan"
