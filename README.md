@@ -295,9 +295,8 @@ This repository is distributed under the MIT License.
 
 The versioned software release is archived on Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21827910.svg)](https://doi.org/10.5281/zenodo.21827910)
 
-**DOI:** [10.5281/zenodo.21827910](https://doi.org/10.5281/zenodo.21827910)
+**DOI:** [[10.5281/zenodo.21827910](https://doi.org/10.5281/zenodo.21827910)](https://zenodo.org/records/21911084)
 
 ---
 
