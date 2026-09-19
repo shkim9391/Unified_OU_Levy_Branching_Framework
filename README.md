@@ -186,6 +186,7 @@ The repository reproduces every figure included in the accompanying methodologic
 | **Figure 5** | Observation-model robustness |
 | **Figure 6** | Calibration to pediatric leukemia data |
 | **Figure 7** | Unified computational workflow |
+| **Figure 8** | Mechanistic discrimination and predictive comparison |
 
 ---
 
