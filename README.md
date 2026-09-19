@@ -282,7 +282,7 @@ The observation model can be replaced to accommodate other biological systems wh
 
 If you use this software in your research, please cite
 
-> **Kim S-H.** *A Unified Ornstein–Uhlenbeck–Lévy–Branching Framework for Interpretable Modeling of Cancer Evolution.* *Mathematical and Computational Biology* (in preparation). 
+> **Kim S-H.** *A Unified Ornstein–Uhlenbeck–Lévy–Branching Framework for Interpretable Modeling of Cancer Evolution.* *Mathematical and Computational Biology* (Under Review). 
 
 ---
 
@@ -297,7 +297,7 @@ This repository is distributed under the MIT License.
 The versioned software release is archived on Zenodo:
 
 
-**DOI:** [[10.5281/zenodo.21827910](https://doi.org/10.5281/zenodo.21827910)](https://zenodo.org/records/21911084)
+**DOI:** https://zenodo.org/records/22850480
 
 ---
 
